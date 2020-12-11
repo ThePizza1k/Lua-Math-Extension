@@ -8,13 +8,13 @@ Nonetheless, you could probably easily incorporate metatables yourself for the b
 ##Main math library
 
 ####Variables below
-math.e -- euler's number (2.71828182845904523536)
-math.halfpi -- half of pi (1.57079632679489661923)
-math.nan -- not a number (nan)
-math.negnan -- negative not a number (-nan)
-math.extended -- boolean that is set to true. Recommended to use as "if math.extended" to check if this code has been run.
+math.e -- euler's number (2.71828182845904523536)  
+math.halfpi -- half of pi (1.57079632679489661923)  
+math.nan -- not a number (nan)  
+math.negnan -- negative not a number (-nan)  
+math.extended -- boolean that is set to true. Recommended to use as `<if math.extended>` to check if this code has been run.  
 
-####Functions below
+####Functions below  
 math.sec(theta) -- secant
 math.csc(theta) -- cosecant
 math.cot(theta) -- cotangent
