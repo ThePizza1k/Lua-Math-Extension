@@ -60,7 +60,7 @@ math.complex.add(cmp1,cmp2) -- adds two complex numbers and returns result.
 math.complex.sub(cmp1,cmp2) -- subtracts complex cmp2 from complex cmp1 and returns result.     
 math.complex.mul(cmp1,cmp2) -- multiplies two complex numbers and returns the result.   
 math.complex.div(cmp1,cmp2) -- divides complex cmp1 by complex cmp2 and returns the result.     
-math.complex.pow(cmp1,cmp2) -- raises complex cmp1 to the power of complex cmp2 and returns the result. 
+math.complex.pow(cmp1,cmp2) -- raises complex cmp1 to the power of complex cmp2 and returns the result.     
 math.complex.exp(input) -- returns e raised to the power of a complex number.   
 math.complex.conj(input) -- returns the complex conjugate of a complex number.  
 math.complex.tostring(input) -- returns string form of complex number.  
@@ -70,7 +70,7 @@ math.complex.tan(input) -- returns tangent of a complex number.
 math.complex.log(input) -- returns logarithm of a complex number.       
 math.complex.abs(input) -- returns absolute value of a complex number. (returns real number)    
 math.complex.binet(input) -- returns result of binet formula for complex input  
-math.complex.arg(input) -- returns argument of complex number in radians. (returns real number) 
+math.complex.arg(input) -- returns argument of complex number in radians. (returns real number)      
 math.complex.equals(cmp1,cmp2) -- returns true if cmp1 is equal to cmp2, otherwise returns false.       
 math.complex.isnan(input) -- returns true if the complex number is nan, such as 0^0 or 0/0      
 math.complex.gamma(input) -- returns gamma(input) for complex numbers. gamma(z+1) == z!         
