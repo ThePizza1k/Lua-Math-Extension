@@ -20,7 +20,7 @@ do
 
   math.negnan = math.sqrt(-1)
 
-  math.golden = (1 + math.sqrt(5))/2
+  math.phi = (1 + math.sqrt(5))/2
 
   function math.isnan(possnan)
     return (possnan ~= possnan)
@@ -122,9 +122,9 @@ do
 
   function math.binet(intinp)
     if intinp%1 == 0 then
-      return (((math.golden)^intinp)-((1-math.golden)^intinp))/(2.2360679774997896964091) -- 2.236... is sqrt(5)
+      return (((math.phi)^intinp)-((1-math.phi)^intinp))/(2.2360679774997896964091) -- 2.236... is sqrt(5)
     else
-      error("integer expected as input for math.bidet",2)
+      error("integer expected as input for math.binet",2)
     end
   end
 
@@ -290,8 +290,8 @@ do
 
     function cmp.binet(compinput)
       local compinput = cmp.tocomplex(compinput)
-      local inb1 = cmp.powrbase(math.golden,compinput)
-      local inb2 = cmp.powrbase(1-math.golden,compinput)
+      local inb1 = cmp.powrbase(math.phi,compinput)
+      local inb2 = cmp.powrbase(1-math.phi,compinput)
       local inb3 = cmp.sub(inb1,inb2)
       return cmp.div(inb3,cmp.new(2.2360679774997896964091,0)) -- 2.236... is sqrt(5)
     end
