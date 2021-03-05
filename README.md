@@ -66,8 +66,8 @@ math.complex.conj(input) -- returns the complex conjugate of a complex number.
 math.complex.tostring(input) -- returns string form of complex number.  
 math.complex.sin(input) -- returns sine of a complex number.    
 math.complex.cos(input) -- returns cosine of a complex number.  
-math.complex.tan(input) -- returns tangent of a complex number. 
-math.complex.log(input) -- returns logarithm of a complex number.       
+math.complex.tan(input) -- returns tangent of a complex number.   
+math.complex.log(input) -- returns natural logarithm of a complex number.       
 math.complex.abs(input) -- returns absolute value of a complex number. (returns real number)    
 math.complex.binet(input) -- returns result of binet formula for complex input  
 math.complex.arg(input) -- returns argument of complex number in radians. (returns real number)      
