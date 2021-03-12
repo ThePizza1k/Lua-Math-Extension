@@ -33,7 +33,7 @@ math.sign(input) -- sign function
 math.erf(input) -- error function       
 math.erfc(input) -- complementary error function        
 math.deriv(inputfunction,inputvalue) -- derivative of given function at given point.    
-math.integral(inputfunction,lowerbound,upperbound,[quality]) -- integrate function from lower bound to upperbound. quality is 500 if not specified.     
+math.integral(inputfunction,lowerbound,upperbound,[quality]) -- integrate function from lower bound to upperbound. quality is 50 if not specified.     
 math.logb(inputbase,inputval) -- logarithm with any base        
 math.guderman(inputval) -- gudermannian function        
 math.deg(radian) -- returns degree value from radian value      
