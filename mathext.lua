@@ -102,14 +102,18 @@ do
     return (math.log(inputval)/math.log(inputbase))
   end
 
-  function math.integral(inpfunct,lowerbound,upperbound,quality) -- integral
-    local quality = quality or 500
-    local inpinc = (upperbound-lowerbound)/quality
-    local outpresult = 0
-    for intiterator=lowerbound,upperbound,inpinc do
-      outpresult = outpresult + (inpfunct(intiterator)*inpinc)
-    end
-    return outpresult
+  function math.integral( f, a, b, n ) -- integral
+    local n = n or 50
+    local h = (b - a) / n
+    local sum1 = f(a + (h*0.5)) 
+    local sum2 = 0
+    -- i really don't know what this is doing but it works. It uses this: https://en.wikipedia.org/wiki/Simpson%27s_rule
+    for i = 1, n-1 do
+        sum1 = sum1 + f(a + h * i + (h*0.5))
+        sum2 = sum2 + f(a + h * i)
+    end    
+    -- i copy pasted the code from here: https://rosettacode.org/wiki/Numerical_integration#Lua
+    return (h*0.1666666666666666666666666) * (f(a) + f(b) + 4*sum1 + 2*sum2)
   end
 
   function math.guderman(inputval) -- gudermannian function
