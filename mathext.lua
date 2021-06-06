@@ -149,6 +149,56 @@ do
     local a3 = x1
     return (a0*mu*mu2)+(a1*mu2)+(a2*mu)+a3
   end
+  
+  local factorialTable = {[0] = 1}
+  do
+    local counter = 1
+    for i = 1,170,1 do
+      counter = counter * i
+      factorialTable[i] = counter
+    end
+  end
+
+  function math.factorial(input)
+    if input < 0 then
+      return 1/0
+    end
+    return factorialTable[math.floor(input)]
+  end
+
+  local etaCoeffTable = {}
+
+  do  -- Precalculating coefficients. :)
+    local counter = 0
+    for i = 0,20 do
+      counter = counter + (factorialTable[19+i] * 4^i)/(factorialTable[20-i]*factorialTable[2*i])
+      etaCoeffTable[i] = 20 * counter
+    end
+  end
+
+  function math.eta(input)
+    if input >= 0.5 then
+      local etaN = etaCoeffTable[20]
+      local sum = 0
+      for k = 0,19 do
+        sum = sum + ((-1)^k * (etaCoeffTable[k] - etaN))/((k+1)^input)
+      end
+      return -1/etaN * sum
+    else
+      if input == 0 then return -0.5 end
+      local negInput = -input
+      local newEta = math.eta(negInput + 1)
+      local gam = math.gamma(negInput)
+      local sinr = math.sin(math.pi/2 * negInput)
+      local pipow = math.pi^(-negInput - 1)
+      local pow2 = 2 * (1-2^(-negInput-1))/(1-2^-negInput)
+      return newEta * gam * sinr * pipow * pow2 * negInput
+    end
+  end
+
+  function math.zeta(input)
+    return math.eta(input)/(1-2^(1-input))
+  end
 
   do
     local cmp = {}
