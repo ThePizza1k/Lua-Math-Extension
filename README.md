@@ -42,8 +42,10 @@ math.isnan(input) -- returns true if the input is nan
 math.lint(x1,x2,mu) -- linearly interpolates between x1 and x2 using given mu value.    
 math.cosint(x1,x2,mu) -- uses cosine to interpolate between x1 and x2 using given mu value.     
 math.cubint(x0,x1,x2,x3,mu) -- uses a cubic function to interpolate between x1 and x2 using given mu value.     
---cubic interpolation requires four points instead of two to provide more continuous interpolation.     
-
+--cubic interpolation requires four points instead of two to provide more continuous interpolation.   
+math.factorial(n) -- factorial function. only good for integers greater than or equal to 0.
+math.eta(input) -- dirichlet eta function.
+math.zeta(input) -- riemann zeta function.
 
 ## Complex library     
 It is accessible with math.complex, and can be aliased as just complex for easier usage.      
